@@ -30,7 +30,7 @@ WORKDIR /home/jenkins
 ENTRYPOINT ["/usr/bin/tini", "--"]
 
 # Run your program under Tini
-CMD ["/bin/bash", "-c", "chmod 660 /home/jenkins/docker.sock; chown root:daemon /home/jenkins/docker.sock; su jenkins && /usr/local/bin/jenkins.sh"]
+CMD ["/bin/bash", "-c", "chmod 660 /home/jenkins/docker.sock; chown root:docker /home/jenkins/docker.sock; su jenkins && /usr/local/bin/jenkins.sh"]
 
 
 
